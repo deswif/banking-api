@@ -32,10 +32,8 @@ public class CreateTransactionUseCase {
         if (!account.getUser().getId().equals(user.getId())) {
             throw new Exception();
         }
-        System.out.println(account);
 
         AccountEntity receiverAccount = accountRepository.findByAccountNumber(request.getReceiverAccount()).orElseThrow();
-        System.out.println(receiverAccount);
 
         if (account.getBalance().compareTo(request.getAmount()) < 0) {
             System.out.println("error balance");

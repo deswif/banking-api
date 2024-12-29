@@ -21,7 +21,6 @@ public class TransactionController {
 
     @PostMapping
     public ResponseEntity<String> createTransaction(@RequestBody CreateTransactionRequest request) throws Exception {
-        System.out.println("Creating transaction");
         createTransactionUseCase.call(request);
         return ResponseEntity.ok("success");
     }
