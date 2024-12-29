@@ -1,0 +1,58 @@
+POST http://localhost:8090/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "max@gmail.com",
+  "password": "123456"
+}
+
+### Register
+POST http://localhost:8090/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "bogdan@gmail.com",
+  "password": "123456"
+}
+
+### Me
+GET http://localhost:8090/api/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2dkYW5AZ21haWwuY29tIiwiaWF0IjoxNzM1NDM5NzYxLCJleHAiOjE3MzU0NDMzNjF9.BfN3Z9T0x703gkvp94Kh5gvoikc9PF8VtsbsJeY3sjc
+
+### Create account
+POST http://localhost:8090/api/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2dkYW5AZ21haWwuY29tIiwiaWF0IjoxNzM1NDM5NzYxLCJleHAiOjE3MzU0NDMzNjF9.BfN3Z9T0x703gkvp94Kh5gvoikc9PF8VtsbsJeY3sjc
+
+### Get accounts
+GET http://localhost:8090/api/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2dkYW5AZ21haWwuY29tIiwiaWF0IjoxNzM1NDM5NzYxLCJleHAiOjE3MzU0NDMzNjF9.BfN3Z9T0x703gkvp94Kh5gvoikc9PF8VtsbsJeY3sjc
+
+### Get account
+GET http://localhost:8090/api/accounts/255
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2dkYW5AZ21haWwuY29tIiwiaWF0IjoxNzM1NDM5NzYxLCJleHAiOjE3MzU0NDMzNjF9.BfN3Z9T0x703gkvp94Kh5gvoikc9PF8VtsbsJeY3sjc
+
+### Create transaction
+POST http://localhost:8090/api/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXhAZ21haWwuY29tIiwiaWF0IjoxNzM1NDM3MjAwLCJleHAiOjE3MzU0NDA4MDB9.yJ8Sv6516FXBRAH72pTHR5dqoRCtqo3lO8sNWYWPr4c
+Content-Type: application/json
+
+{
+  "accountId": 252,
+  "receiverAccount": "4441114414830915",
+  "amount": 100.01
+}
+
+### Create transaction
+POST http://localhost:8090/api/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXhAZ21haWwuY29tIiwiaWF0IjoxNzM1NDM3MjAwLCJleHAiOjE3MzU0NDA4MDB9.yJ8Sv6516FXBRAH72pTHR5dqoRCtqo3lO8sNWYWPr4c
+Content-Type: application/json
+
+{
+  "accountId": 253,
+  "receiverAccount": "4441114450694558",
+  "amount": 200.05
+}
+
+### Get transactions
+GET http://localhost:8090/api/accounts/255/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib2dkYW5AZ21haWwuY29tIiwiaWF0IjoxNzM1NDM5NzYxLCJleHAiOjE3MzU0NDMzNjF9.BfN3Z9T0x703gkvp94Kh5gvoikc9PF8VtsbsJeY3sjc
